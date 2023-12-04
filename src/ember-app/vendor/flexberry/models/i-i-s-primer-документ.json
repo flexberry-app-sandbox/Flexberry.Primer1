@@ -1,0 +1,40 @@
+﻿{
+  "name": "IISPrimerДокумент",
+  "modelName": "i-i-s-primer-документ",
+  "className": "Документ",
+  "nameSpace": "IIS.Primer",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "iD",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "описание",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "тЧ",
+      "relatedTo": "i-i-s-primer-т-ч",
+      "inverse": "документ"
+    }
+  ],
+  "projections": [],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
