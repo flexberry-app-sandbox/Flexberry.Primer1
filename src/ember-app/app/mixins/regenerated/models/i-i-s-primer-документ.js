@@ -2,6 +2,7 @@ import Mixin from '@ember/object/mixin';
 import $ from 'jquery';
 import DS from 'ember-data';
 import { validator } from 'ember-cp-validations';
+import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
 
 export let Model = Mixin.create({
   iD: DS.attr('number'),
@@ -30,4 +31,21 @@ export let ValidationRules = {
       validator('has-many'),
     ],
   },
+};
+
+export let defineProjections = function (modelClass) {
+  modelClass.defineProjection('ДокументE', 'i-i-s-primer-документ', {
+    iD: attr('ID', { index: 0 }),
+    описание: attr('Описание', { index: 1 }),
+    тЧ: hasMany('i-i-s-primer-т-ч', 'ТЧ', {
+      строка: attr('Строка', { index: 0 }),
+      количество: attr('Количество', { index: 1 }),
+      сумма: attr('Сумма', { index: 2 })
+    })
+  });
+
+  modelClass.defineProjection('ДокументL', 'i-i-s-primer-документ', {
+    iD: attr('ID', { index: 0 }),
+    описание: attr('Описание', { index: 1 })
+  });
 };

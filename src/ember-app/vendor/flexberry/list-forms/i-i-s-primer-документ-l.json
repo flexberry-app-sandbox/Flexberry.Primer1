@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-primer-документ-e",
+  "editForm": "i-i-s-primer-документ-e",
+  "external": false,
+  "caption": "Документ",
+  "name": "IISPrimerДокументL",
+  "className": "ДокументL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-primer-документ",
+      "modelProjection": "ДокументL"
+    }
+  ]
+}

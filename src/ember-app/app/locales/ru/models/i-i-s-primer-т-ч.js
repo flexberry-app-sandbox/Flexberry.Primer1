@@ -1,5 +1,16 @@
 export default {
   projections: {
+    ТЧE: {
+      строка: {
+        __caption__: 'Строка'
+      },
+      количество: {
+        __caption__: 'Количество'
+      },
+      сумма: {
+        __caption__: 'Сумма'
+      }
+    }
   },
   validations: {
     количество: {

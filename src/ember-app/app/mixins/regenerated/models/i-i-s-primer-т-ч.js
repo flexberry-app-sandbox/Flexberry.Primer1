@@ -2,6 +2,7 @@ import Mixin from '@ember/object/mixin';
 import $ from 'jquery';
 import DS from 'ember-data';
 import { validator } from 'ember-cp-validations';
+import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
 
 export let Model = Mixin.create({
   количество: DS.attr('number'),
@@ -39,4 +40,12 @@ export let ValidationRules = {
       validator('presence', true),
     ],
   },
+};
+
+export let defineProjections = function (modelClass) {
+  modelClass.defineProjection('ТЧE', 'i-i-s-primer-т-ч', {
+    строка: attr('Строка', { index: 0 }),
+    количество: attr('Количество', { index: 1 }),
+    сумма: attr('Сумма', { index: 2 })
+  });
 };

@@ -33,7 +33,56 @@
       "inverse": "документ"
     }
   ],
-  "projections": [],
+  "projections": [
+    {
+      "name": "ДокументE",
+      "modelName": "i-i-s-primer-документ",
+      "attrs": [
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "описание",
+          "caption": "Описание",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ТЧE",
+          "caption": "ТЧ",
+          "name": "тЧ",
+          "relatedTo": "i-i-s-primer-т-ч",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ДокументL",
+      "modelName": "i-i-s-primer-документ",
+      "attrs": [
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "описание",
+          "caption": "Описание",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
   "stored": true,
   "offline": true,
   "external": false

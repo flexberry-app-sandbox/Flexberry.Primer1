@@ -6,7 +6,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function () {
-
+  this.route('i-i-s-primer-документ-l');
+  this.route('i-i-s-primer-документ-e',
+  { path: 'i-i-s-primer-документ-e/:id' });
+  this.route('i-i-s-primer-документ-e.new',
+  { path: 'i-i-s-primer-документ-e/new' });
 });
 
 export default Router;

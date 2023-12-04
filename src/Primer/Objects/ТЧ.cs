@@ -28,6 +28,10 @@ namespace IIS.Primer
     // *** End programmer edit section *** (ТЧ CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ТЧE", new string[] {
+            "Строка as \'Строка\'",
+            "Количество as \'Количество\'",
+            "Сумма as \'Сумма\'"})]
     public class ТЧ : ICSSoft.STORMNET.DataObject
     {
         
@@ -169,6 +173,24 @@ namespace IIS.Primer
                 // *** Start programmer edit section *** (ТЧ.Документ Set end)
 
                 // *** End programmer edit section *** (ТЧ.Документ Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ТЧE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ТЧE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ТЧE", typeof(IIS.Primer.ТЧ));
+                }
             }
         }
     }

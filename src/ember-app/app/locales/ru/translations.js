@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import EmberFlexberryTranslations from 'ember-flexberry/locales/ru/translations';
 
+import IISPrimerДокументLForm from './forms/i-i-s-primer-документ-l';
+import IISPrimerДокументEForm from './forms/i-i-s-primer-документ-e';
 import IISPrimerДокументModel from './models/i-i-s-primer-документ';
 import IISPrimerТЧModel from './models/i-i-s-primer-т-ч';
 
@@ -13,7 +15,7 @@ $.extend(true, translations, {
     'i-i-s-primer-т-ч': IISPrimerТЧModel
   },
 
-  'application-name': '',
+  'application-name': 'Primer',
 
   forms: {
     loading: {
@@ -52,7 +54,7 @@ $.extend(true, translations, {
       },
 
       footer: {
-        'application-name': '',
+        'application-name': 'Primer',
         'application-version': {
           caption: 'Версия аддона {{version}}',
           title: 'Это версия аддона ember-flexberry, которая сейчас используется в этом тестовом приложении ' +
@@ -63,8 +65,8 @@ $.extend(true, translations, {
 
       sitemap: {
         'application-name': {
-          caption: '',
-          title: ''
+          caption: 'Primer',
+          title: 'Primer'
         },
         'application-version': {
           caption: 'Версия аддона {{version}}',
@@ -76,7 +78,18 @@ $.extend(true, translations, {
           caption: 'Главная',
           title: ''
         },
-
+        primer: {
+          caption: 'Primer',
+          title: 'Primer',
+          'i-i-s-primer-документ-l': {
+            caption: 'Документ',
+            title: ''
+          }
+        },
+        'new-folder1': {
+          caption: 'NewFolder1',
+          title: 'NewFolder1'
+        }
       }
     },
 
@@ -88,7 +101,8 @@ $.extend(true, translations, {
       'delete-success-message': 'Объект удален',
       'delete-error-message-caption': 'Ошибка удаления'
     },
-
+    'i-i-s-primer-документ-l': IISPrimerДокументLForm,
+    'i-i-s-primer-документ-e': IISPrimerДокументEForm
   },
 
 });

@@ -28,6 +28,14 @@ namespace IIS.Primer
     // *** End programmer edit section *** (Документ CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ДокументE", new string[] {
+            "ID as \'ID\'",
+            "Описание as \'Описание\'"})]
+    [AssociatedDetailViewAttribute("ДокументE", "ТЧ", "ТЧE", true, "", "ТЧ", true, new string[] {
+            ""})]
+    [View("ДокументL", new string[] {
+            "ID as \'ID\'",
+            "Описание as \'Описание\'"})]
     public class Документ : ICSSoft.STORMNET.DataObject
     {
         
@@ -137,6 +145,35 @@ namespace IIS.Primer
                 // *** Start programmer edit section *** (Документ.ТЧ Set end)
 
                 // *** End programmer edit section *** (Документ.ТЧ Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ДокументE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ДокументE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ДокументE", typeof(IIS.Primer.Документ));
+                }
+            }
+            
+            /// <summary>
+            /// "ДокументL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ДокументL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ДокументL", typeof(IIS.Primer.Документ));
+                }
             }
         }
     }

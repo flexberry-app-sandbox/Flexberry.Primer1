@@ -1,6 +1,29 @@
 ﻿{
-  "applicationCaption": null,
-  "applicationTitle": null,
-  "items": [],
+  "applicationCaption": "Primer",
+  "applicationTitle": "Primer",
+  "items": [
+    {
+      "link": null,
+      "menuName": "primer",
+      "caption": "Primer",
+      "title": "Primer",
+      "children": [
+        {
+          "link": "i-i-s-primer-документ-l",
+          "menuName": null,
+          "caption": "Документ",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "new-folder1",
+      "caption": "NewFolder1",
+      "title": "NewFolder1",
+      "children": null
+    }
+  ],
   "mobile": true
 }
