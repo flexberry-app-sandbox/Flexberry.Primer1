@@ -107,14 +107,14 @@
           "attrs": [
             {
               "name": "фИО",
-              "caption": "ФИО",
+              "caption": "Фамилия имя отчество",
               "hidden": false,
               "index": 3
             }
           ],
           "index": -1,
           "type": "default",
-          "caption": "ФИО",
+          "caption": "Фамилия имя отчество",
           "name": "сотрудник",
           "relatedTo": "i-i-s-primer-сотрудник",
           "inverse": null

@@ -30,10 +30,11 @@ namespace IIS.Primer
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ПредставлениеE", new string[] {
             "*",
-            "ФИО",
-            "Должность"})]
+            "ФИО as \'Фамилия имя и отчество\'",
+            "Должность as \'Должность сотрудника\'"})]
     [View("ПредставлениеL", new string[] {
-            "ФИО"})]
+            "ФИО as \'Фамилия отчество имя\'",
+            "Должность.Должность as \'Должность сотр\'"})]
     public class Сотрудник : ICSSoft.STORMNET.DataObject
     {
         

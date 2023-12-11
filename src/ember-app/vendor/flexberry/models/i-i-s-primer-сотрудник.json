@@ -33,7 +33,7 @@
       "attrs": [
         {
           "name": "фИО",
-          "caption": "",
+          "caption": "Фамилия имя и отчество",
           "hidden": false,
           "index": 0
         }
@@ -48,7 +48,7 @@
           "attrs": [],
           "index": 1,
           "type": "default",
-          "caption": "",
+          "caption": "Должность сотрудника",
           "name": "должность",
           "relatedTo": "i-i-s-primer-должность",
           "inverse": null
@@ -62,12 +62,34 @@
       "attrs": [
         {
           "name": "фИО",
-          "caption": "",
+          "caption": "Фамилия отчество имя",
           "hidden": false,
           "index": 0
         }
       ],
-      "belongsTo": [],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Должность",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "должность",
+              "caption": "Должность сотр",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Должность сотр",
+          "name": "должность",
+          "relatedTo": "i-i-s-primer-должность",
+          "inverse": null
+        }
+      ],
       "hasMany": []
     }
   ],

@@ -19,10 +19,10 @@ export let ValidationRules = {
 
 export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ДолжностьE', 'i-i-s-primer-должность', {
-    должность: attr('', { index: 0 })
+    должность: attr('должность2', { index: 0 })
   });
 
   modelClass.defineProjection('ДолжностьE', 'i-i-s-primer-должность', {
-    должность: attr('', { index: 0 })
+    должность: attr('должность3', { index: 0 })
   });
 };

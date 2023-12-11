@@ -34,4 +34,14 @@
     }}
     {{flexberry-validationmessage error=(v-get validationModel "фИО" "message")}}
   </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.должность.должность
+      class=(if (v-get validationModel.должность "должность" "isInvalid") "error")
+      label=(t "forms.i-i-s-primer-сотрудник-l.должность.должность-caption")
+      data-test-i-i-s-primer-сотрудник-l-должность-должность=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.должность "должность" "message")}}
+  </div>
 </form>

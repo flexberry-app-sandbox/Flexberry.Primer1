@@ -29,10 +29,9 @@ namespace IIS.Primer
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ДолжностьE", new string[] {
-            "Должность",
-            "*"})]
+            "Должность as \'должность2\'"})]
     [View("ДолжностьE", new string[] {
-            "Должность"})]
+            "Должность as \'должность3\'"})]
     public class Должность : ICSSoft.STORMNET.DataObject
     {
         
