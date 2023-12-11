@@ -31,11 +31,14 @@ namespace IIS.Primer
     [View("ДокументE", new string[] {
             "ID as \'ID\'",
             "Описание as \'Описание\'"})]
-    [AssociatedDetailViewAttribute("ДокументE", "ТЧ", "ТЧE", true, "", "ТЧ", true, new string[] {
+    [AssociatedDetailViewAttribute("ДокументE", "ТЧ", "ТЧE", true, "", "Табличная Ч", true, new string[] {
             ""})]
     [View("ДокументL", new string[] {
             "ID as \'ID\'",
-            "Описание as \'Описание\'"})]
+            "Описание as \'Описание\'",
+            "*"})]
+    [AssociatedDetailViewAttribute("ДокументL", "ТЧ", "ТЧE", true, "", "Табл часть", true, new string[] {
+            ""})]
     public class Документ : ICSSoft.STORMNET.DataObject
     {
         

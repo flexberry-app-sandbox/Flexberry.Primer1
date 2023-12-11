@@ -55,7 +55,7 @@
       "hasMany": [
         {
           "projectionName": "ТЧE",
-          "caption": "ТЧ",
+          "caption": "Табличная Ч",
           "name": "тЧ",
           "relatedTo": "i-i-s-primer-т-ч",
           "inverse": null
@@ -80,7 +80,15 @@
         }
       ],
       "belongsTo": [],
-      "hasMany": []
+      "hasMany": [
+        {
+          "projectionName": "ТЧE",
+          "caption": "Табл часть",
+          "name": "тЧ",
+          "relatedTo": "i-i-s-primer-т-ч",
+          "inverse": null
+        }
+      ]
     }
   ],
   "stored": true,

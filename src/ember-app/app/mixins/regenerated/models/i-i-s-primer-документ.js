@@ -37,7 +37,7 @@ export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ДокументE', 'i-i-s-primer-документ', {
     iD: attr('ID', { index: 0 }),
     описание: attr('Описание', { index: 1 }),
-    тЧ: hasMany('i-i-s-primer-т-ч', 'ТЧ', {
+    тЧ: hasMany('i-i-s-primer-т-ч', 'Табличная Ч', {
       строка: attr('Строка', { index: 0 }),
       количество: attr('Количество', { index: 1 }),
       сумма: attr('Сумма', { index: 2 }),
@@ -52,6 +52,17 @@ export let defineProjections = function (modelClass) {
 
   modelClass.defineProjection('ДокументL', 'i-i-s-primer-документ', {
     iD: attr('ID', { index: 0 }),
-    описание: attr('Описание', { index: 1 })
+    описание: attr('Описание', { index: 1 }),
+    тЧ: hasMany('i-i-s-primer-т-ч', 'Табл часть', {
+      строка: attr('Строка', { index: 0 }),
+      количество: attr('Количество', { index: 1 }),
+      сумма: attr('Сумма', { index: 2 }),
+      сотрудник: belongsTo('i-i-s-primer-сотрудник', 'Фамилия имя отчество', {
+        фИО: attr('Фамилия имя отчество', { index: 3 }),
+        должность: belongsTo('i-i-s-primer-должность', '', {
+          должность: attr('Должность', { index: 4 })
+        }, { index: -1, hidden: true })
+      }, { index: -1, hidden: true })
+    })
   });
 };
