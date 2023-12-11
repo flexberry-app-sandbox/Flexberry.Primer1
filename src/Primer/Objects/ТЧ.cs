@@ -27,11 +27,14 @@ namespace IIS.Primer
 
     // *** End programmer edit section *** (ТЧ CustomAttributes)
     [AutoAltered()]
+    [Caption("Табличная часть документа")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ТЧE", new string[] {
             "Строка as \'Строка\'",
             "Количество as \'Количество\'",
-            "Сумма as \'Сумма\'"})]
+            "Сумма as \'Сумма\'",
+            "Сотрудник.ФИО as \'ФИО\'",
+            "Сотрудник.Должность.Должность as \'Должность\'"})]
     public class ТЧ : ICSSoft.STORMNET.DataObject
     {
         
@@ -40,6 +43,8 @@ namespace IIS.Primer
         private int fКоличество;
         
         private double fСумма;
+        
+        private IIS.Primer.Сотрудник fСотрудник;
         
         private IIS.Primer.Документ fДокумент;
         
@@ -138,6 +143,40 @@ namespace IIS.Primer
                 // *** Start programmer edit section *** (ТЧ.Сумма Set end)
 
                 // *** End programmer edit section *** (ТЧ.Сумма Set end)
+            }
+        }
+        
+        /// <summary>
+        /// ТЧ.
+        /// </summary>
+        // *** Start programmer edit section *** (ТЧ.Сотрудник CustomAttributes)
+
+        // *** End programmer edit section *** (ТЧ.Сотрудник CustomAttributes)
+        [PropertyStorage(new string[] {
+                "Сотрудник"})]
+        [NotNull()]
+        public virtual IIS.Primer.Сотрудник Сотрудник
+        {
+            get
+            {
+                // *** Start programmer edit section *** (ТЧ.Сотрудник Get start)
+
+                // *** End programmer edit section *** (ТЧ.Сотрудник Get start)
+                IIS.Primer.Сотрудник result = this.fСотрудник;
+                // *** Start programmer edit section *** (ТЧ.Сотрудник Get end)
+
+                // *** End programmer edit section *** (ТЧ.Сотрудник Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (ТЧ.Сотрудник Set start)
+
+                // *** End programmer edit section *** (ТЧ.Сотрудник Set start)
+                this.fСотрудник = value;
+                // *** Start programmer edit section *** (ТЧ.Сотрудник Set end)
+
+                // *** End programmer edit section *** (ТЧ.Сотрудник Set end)
             }
         }
         

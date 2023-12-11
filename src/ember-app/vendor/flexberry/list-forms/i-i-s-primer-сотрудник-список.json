@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-primer-сотрудник-l",
+  "editForm": "i-i-s-primer-сотрудник-l",
+  "external": false,
+  "caption": "",
+  "name": "IISPrimerСотрудникСписок",
+  "className": "СотрудникСписок",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-primer-сотрудник",
+      "modelProjection": "ПредставлениеE"
+    }
+  ]
+}

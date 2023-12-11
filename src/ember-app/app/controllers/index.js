@@ -22,7 +22,18 @@ export default Controller.extend({
             link: 'i-i-s-primer-документ-l',
             caption: i18n.t('forms.application.sitemap.primer.i-i-s-primer-документ-l.caption'),
             title: i18n.t('forms.application.sitemap.primer.i-i-s-primer-документ-l.title'),
-            icon: 'phone',
+            icon: 'tags',
+            children: null
+          }, {
+            link: 'i-i-s-primer-должность-l',
+            caption: i18n.t('forms.application.sitemap.primer.i-i-s-primer-должность-l.caption'),
+            title: i18n.t('forms.application.sitemap.primer.i-i-s-primer-должность-l.title'),
+            children: null
+          }, {
+            link: 'i-i-s-primer-сотрудник-список',
+            caption: i18n.t('forms.application.sitemap.primer.i-i-s-primer-сотрудник-список.caption'),
+            title: i18n.t('forms.application.sitemap.primer.i-i-s-primer-сотрудник-список.title'),
+            icon: 'archive',
             children: null
           }]
         }

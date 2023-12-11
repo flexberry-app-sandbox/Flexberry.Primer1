@@ -4,6 +4,8 @@ moduleForModel('i-i-s-primer-документ', 'Unit | Model | i-i-s-primer-д�
   // Specify the other units that are required for this test.
   needs: [
     'model:i-i-s-primer-документ',
+    'model:i-i-s-primer-должность',
+    'model:i-i-s-primer-сотрудник',
     'model:i-i-s-primer-т-ч',
     'validator:ds-error',
     'validator:presence',

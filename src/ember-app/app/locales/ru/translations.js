@@ -2,8 +2,14 @@ import $ from 'jquery';
 import EmberFlexberryTranslations from 'ember-flexberry/locales/ru/translations';
 
 import IISPrimerДокументLForm from './forms/i-i-s-primer-документ-l';
+import IISPrimerДолжностьLForm from './forms/i-i-s-primer-должность-l';
+import IISPrimerСотрудникСписокForm from './forms/i-i-s-primer-сотрудник-список';
 import IISPrimerДокументEForm from './forms/i-i-s-primer-документ-e';
+import IISPrimerДолжностьEForm from './forms/i-i-s-primer-должность-e';
+import IISPrimerСотрудникLForm from './forms/i-i-s-primer-сотрудник-l';
 import IISPrimerДокументModel from './models/i-i-s-primer-документ';
+import IISPrimerДолжностьModel from './models/i-i-s-primer-должность';
+import IISPrimerСотрудникModel from './models/i-i-s-primer-сотрудник';
 import IISPrimerТЧModel from './models/i-i-s-primer-т-ч';
 
 const translations = {};
@@ -12,6 +18,8 @@ $.extend(true, translations, EmberFlexberryTranslations);
 $.extend(true, translations, {
   models: {
     'i-i-s-primer-документ': IISPrimerДокументModel,
+    'i-i-s-primer-должность': IISPrimerДолжностьModel,
+    'i-i-s-primer-сотрудник': IISPrimerСотрудникModel,
     'i-i-s-primer-т-ч': IISPrimerТЧModel
   },
 
@@ -84,6 +92,14 @@ $.extend(true, translations, {
           'i-i-s-primer-документ-l': {
             caption: 'Документ',
             title: ''
+          },
+          'i-i-s-primer-должность-l': {
+            caption: 'Должность',
+            title: ''
+          },
+          'i-i-s-primer-сотрудник-список': {
+            caption: 'СотрудникСписок',
+            title: ''
           }
         },
         'new-folder1': {
@@ -102,7 +118,11 @@ $.extend(true, translations, {
       'delete-error-message-caption': 'Ошибка удаления'
     },
     'i-i-s-primer-документ-l': IISPrimerДокументLForm,
-    'i-i-s-primer-документ-e': IISPrimerДокументEForm
+    'i-i-s-primer-должность-l': IISPrimerДолжностьLForm,
+    'i-i-s-primer-сотрудник-список': IISPrimerСотрудникСписокForm,
+    'i-i-s-primer-документ-e': IISPrimerДокументEForm,
+    'i-i-s-primer-должность-e': IISPrimerДолжностьEForm,
+    'i-i-s-primer-сотрудник-l': IISPrimerСотрудникLForm
   },
 
 });

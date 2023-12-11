@@ -14,6 +14,20 @@
           "caption": "Документ",
           "title": "",
           "children": null
+        },
+        {
+          "link": "i-i-s-primer-должность-l",
+          "menuName": null,
+          "caption": "Должность",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-primer-сотрудник-список",
+          "menuName": null,
+          "caption": "СотрудникСписок",
+          "title": "",
+          "children": null
         }
       ]
     }

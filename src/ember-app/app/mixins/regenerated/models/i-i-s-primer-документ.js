@@ -40,7 +40,13 @@ export let defineProjections = function (modelClass) {
     тЧ: hasMany('i-i-s-primer-т-ч', 'ТЧ', {
       строка: attr('Строка', { index: 0 }),
       количество: attr('Количество', { index: 1 }),
-      сумма: attr('Сумма', { index: 2 })
+      сумма: attr('Сумма', { index: 2 }),
+      сотрудник: belongsTo('i-i-s-primer-сотрудник', 'ФИО', {
+        фИО: attr('ФИО', { index: 3 }),
+        должность: belongsTo('i-i-s-primer-должность', '', {
+          должность: attr('Должность', { index: 4 })
+        }, { index: -1, hidden: true })
+      }, { index: -1, hidden: true })
     })
   });
 

@@ -2,6 +2,17 @@
 
 
 
+CREATE TABLE "Должность"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"Должность" NVARCHAR2(255) NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
 CREATE TABLE "Документ"
 (
 
@@ -10,6 +21,19 @@ CREATE TABLE "Документ"
 	"ID" NUMBER(10) NULL,
 
 	"Описание" NVARCHAR2(255) NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
+CREATE TABLE "Сотрудник"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"ФИО" NVARCHAR2(255) NULL,
+
+	"Должность" RAW(16) NOT NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;
@@ -25,6 +49,8 @@ CREATE TABLE "ТЧ"
 	"Количество" NUMBER(10) NULL,
 
 	"Сумма" FLOAT(126) NULL,
+
+	"Сотрудник" RAW(16) NOT NULL,
 
 	"Документ" RAW(16) NOT NULL,
 
@@ -229,6 +255,16 @@ CREATE TABLE "ApplicationLog"
 ) ;
 
 
+
+ALTER TABLE "Сотрудник"
+	ADD CONSTRAINT "Сотрудник_FДо_9849" FOREIGN KEY ("Должность") REFERENCES "Должность" ("primaryKey");
+
+CREATE INDEX "Сотрудник_IДо_2523" on "Сотрудник" ("Должность");
+
+ALTER TABLE "ТЧ"
+	ADD CONSTRAINT "ТЧ_FСотрудник_0" FOREIGN KEY ("Сотрудник") REFERENCES "Сотрудник" ("primaryKey");
+
+CREATE INDEX "ТЧ_IСотрудник" on "ТЧ" ("Сотрудник");
 
 ALTER TABLE "ТЧ"
 	ADD CONSTRAINT "ТЧ_FДокумент_0" FOREIGN KEY ("Документ") REFERENCES "Документ" ("primaryKey");

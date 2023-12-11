@@ -10,6 +10,8 @@ moduleForModel('i-i-s-primer-т-ч', 'Unit | Serializer | i-i-s-primer-т-ч', {
     'transform:guid',
 
     'model:i-i-s-primer-документ',
+    'model:i-i-s-primer-должность',
+    'model:i-i-s-primer-сотрудник',
     'model:i-i-s-primer-т-ч',
     'validator:ds-error',
     'validator:presence',

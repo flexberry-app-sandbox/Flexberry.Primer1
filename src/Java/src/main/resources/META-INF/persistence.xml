@@ -3,7 +3,9 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistencehttp://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="Olingo4PG">
+        <class>Primer.model.Dolzhnost</class>
         <class>Primer.model.Dokument</class>
+        <class>Primer.model.Sotrudnik</class>
         <class>Primer.model.TCH</class>
         <class>Primer.model.FlexberryAdvLimit</class>
         <class>Primer.model.NewPlatformFlexberryFlexberryUserSetting</class>

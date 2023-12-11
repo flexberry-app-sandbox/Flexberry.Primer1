@@ -1,0 +1,77 @@
+﻿{
+  "name": "IISPrimerСотрудник",
+  "modelName": "i-i-s-primer-сотрудник",
+  "className": "Сотрудник",
+  "nameSpace": "IIS.Primer",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "фИО",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "должность",
+      "relatedTo": "i-i-s-primer-должность",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПредставлениеE",
+      "modelName": "i-i-s-primer-сотрудник",
+      "attrs": [
+        {
+          "name": "фИО",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Должность",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 1,
+          "type": "default",
+          "caption": "",
+          "name": "должность",
+          "relatedTo": "i-i-s-primer-должность",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ПредставлениеL",
+      "modelName": "i-i-s-primer-сотрудник",
+      "attrs": [
+        {
+          "name": "фИО",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

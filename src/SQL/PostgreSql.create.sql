@@ -3,10 +3,23 @@
 
 
 
+CREATE TABLE Должность (
+ primaryKey UUID NOT NULL,
+ Должность VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
 CREATE TABLE Документ (
  primaryKey UUID NOT NULL,
  ID INT NULL,
  Описание VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Сотрудник (
+ primaryKey UUID NOT NULL,
+ ФИО VARCHAR(255) NULL,
+ Должность UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
 
@@ -15,6 +28,7 @@ CREATE TABLE ТЧ (
  Количество INT NULL,
  Строка INT NULL,
  Сумма DOUBLE PRECISION NULL,
+ Сотрудник UUID NOT NULL,
  Документ UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
@@ -122,6 +136,12 @@ CREATE TABLE ApplicationLog (
  PRIMARY KEY (primaryKey));
 
 
+
+ ALTER TABLE Сотрудник ADD CONSTRAINT FK52e78a286299ec0faa67b4f751a6cda2dec1a57a FOREIGN KEY (Должность) REFERENCES Должность; 
+CREATE INDEX Index52e78a286299ec0faa67b4f751a6cda2dec1a57a on Сотрудник (Должность); 
+
+ ALTER TABLE ТЧ ADD CONSTRAINT FKaeab599e1cc305104dca57f024bfac5c2743a23b FOREIGN KEY (Сотрудник) REFERENCES Сотрудник; 
+CREATE INDEX Indexaeab599e1cc305104dca57f024bfac5c2743a23b on ТЧ (Сотрудник); 
 
  ALTER TABLE ТЧ ADD CONSTRAINT FK44f2a88a08959c22a7848231f0bb36dff3e2cabf FOREIGN KEY (Документ) REFERENCES Документ; 
 CREATE INDEX Index44f2a88a08959c22a7848231f0bb36dff3e2cabf on ТЧ (Документ); 
