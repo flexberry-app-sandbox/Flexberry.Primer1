@@ -44,9 +44,9 @@ CREATE TABLE "ТЧ"
 
 	"primaryKey" RAW(16) NOT NULL,
 
-	"Строка" NUMBER(10) NULL,
-
 	"Количество" NUMBER(10) NULL,
+
+	"Строка" NUMBER(10) NULL,
 
 	"Сумма" FLOAT(126) NULL,
 
